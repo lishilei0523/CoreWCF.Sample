@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <NoDefaultLaunchSettingsFile>True</NoDefaultLaunchSettingsFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="E:\Packages\nuget\cache\corewcf.configurationmanager\0.3.0\contentFiles\any\netstandard2.0\CoreWCF.machine.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoreWCF.Primitives" Version="0.3.0" />
+    <PackageReference Include="CoreWCF.Http" Version="0.3.0" />
+    <PackageReference Include="CoreWCF.NetTcp" Version="0.3.0" />
+    <PackageReference Include="CoreWCF.ConfigurationManager" Version="0.3.0" />
+    <PackageReference Include="SD.Toolkits.AspNet" Version="1.0.4" />
+    <PackageReference Include="SD.Toolkits.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="SD.IOC.Core" Version="2.0.7" />
+    <PackageReference Include="SD.IOC.Extension.NetCore" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.AppService\Sample.AppService.csproj" />
+    <ProjectReference Include="..\Sample.IAppService\Sample.IAppService.csproj" />
+  </ItemGroup>
+</Project>

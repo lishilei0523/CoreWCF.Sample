@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Sample.Client</RootNamespace>
+    <AssemblyName>Sample.Client</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SD.IOC.Core" Version="2.0.7" />
+    <PackageReference Include="SD.IOC.Extension.NetFx" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sample.IAppService\Sample.IAppService.csproj" />
+  </ItemGroup>
+</Project>
