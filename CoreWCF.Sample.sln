@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.IAppService", "Sample.IAppService\Sample.IAppService.csproj", "{B32DB226-5927-4583-8221-B59716252CC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.IAppService", "src\Sample.IAppService\Sample.IAppService.csproj", "{B32DB226-5927-4583-8221-B59716252CC2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AppService", "Sample.AppService\Sample.AppService.csproj", "{02D222DC-7FF6-47F9-A15A-7CC1420F3543}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AppService", "src\Sample.AppService\Sample.AppService.csproj", "{02D222DC-7FF6-47F9-A15A-7CC1420F3543}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AppService.Host", "Sample.AppService.Host\Sample.AppService.Host.csproj", "{F07CC25E-BF79-4D73-BC2A-35D23BC28315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AppService.Host", "src\Sample.AppService.Host\Sample.AppService.Host.csproj", "{F07CC25E-BF79-4D73-BC2A-35D23BC28315}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Host", "00 - Host", "{5E0AFE84-333D-49D3-BE01-F7A60F42E4C0}"
 EndProject
@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - 应用程序服务", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - TestClients", "02 - TestClients", "{9003969E-14EB-4C6B-A4DF-C858B1FFDC10}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Client.NetCore", "Sample.Client.NetCore\Sample.Client.NetCore.csproj", "{C7239A60-6468-4A99-80C2-57708B3D7018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Client.NetCore", "src\Sample.Client.NetCore\Sample.Client.NetCore.csproj", "{C7239A60-6468-4A99-80C2-57708B3D7018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Client.NetFx", "Sample.Client.NetFx\Sample.Client.NetFx.csproj", "{F8712DB0-B85F-44B7-BAE1-15DF5369448C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Client.NetFx", "src\Sample.Client.NetFx\Sample.Client.NetFx.csproj", "{F8712DB0-B85F-44B7-BAE1-15DF5369448C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
