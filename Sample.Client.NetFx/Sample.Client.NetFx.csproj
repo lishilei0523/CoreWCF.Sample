@@ -2,14 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Sample.Client</RootNamespace>
     <AssemblyName>Sample.Client</AssemblyName>
+    <RootNamespace>Sample.Client</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.ServiceModel" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="SD.IOC.Core" Version="2.0.7" />
