@@ -20,7 +20,8 @@ namespace Sample.Client
 
             IOrderContract orderContract = ResolveMediator.Resolve<IOrderContract>();
 
-            OrderInfo orderInfo = orderContract.GetOrder("单据编号");
+            string orderNo = $"WO{DateTime.Now:yyyyMMddHHmmss}";
+            OrderInfo orderInfo = orderContract.GetOrder(orderNo);
 
             Console.WriteLine("单据服务");
             Console.WriteLine("单据Id：" + orderInfo.Id);

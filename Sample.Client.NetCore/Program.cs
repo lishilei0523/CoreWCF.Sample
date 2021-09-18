@@ -23,13 +23,8 @@ namespace Sample.Client
             //binding.SendTimeout = new TimeSpan(0, 10, 0);
             //binding.ReceiveTimeout = new TimeSpan(0, 10, 0);
 
-            //EndpointAddress productContractAddress = new EndpointAddress("http://localhost:8060/Hosts/ProductContract.svc");
-            //EndpointAddress orderContractAddress = new EndpointAddress("http://localhost:8060/Hosts/OrderContract.svc");
-
-            //ChannelFactory<IProductContract> productContractFactory = new ChannelFactory<IProductContract>(binding, productContractAddress);
+            //EndpointAddress orderContractAddress = new EndpointAddress("http://localhost:4071/Hosts/OrderContract.svc");
             //ChannelFactory<IOrderContract> orderContractFactory = new ChannelFactory<IOrderContract>(binding, orderContractAddress);
-
-            //IProductContract productContract = productContractFactory.CreateChannel();
             //IOrderContract orderContract = orderContractFactory.CreateChannel(); 
 
             #endregion
@@ -47,7 +42,8 @@ namespace Sample.Client
 
             #endregion
 
-            OrderInfo orderInfo = orderContract.GetOrder("单据编号");
+            string orderNo = $"WO{DateTime.Now:yyyyMMddHHmmss}";
+            OrderInfo orderInfo = orderContract.GetOrder(orderNo);
 
             Console.WriteLine("单据服务");
             Console.WriteLine("单据Id：" + orderInfo.Id);

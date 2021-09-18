@@ -1,10 +1,6 @@
 ﻿using CoreWCF.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using SD.Toolkits.AspNet;
-using SD.Toolkits.AspNet.Configurations;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Sample.AppService.Host
 {
@@ -17,14 +13,10 @@ namespace Sample.AppService.Host
             //WebHost配置
             hostBuilder.ConfigureWebHostDefaults(webBuilder =>
             {
-                ICollection<string> urls = new HashSet<string>();
-                foreach (HostElement hostElement in AspNetSection.Setting.HostElements)
+                webBuilder.UseKestrel(options =>
                 {
-                    urls.Add(hostElement.Url);
-                }
-
-                webBuilder.UseKestrel();
-                webBuilder.UseUrls(urls.ToArray());
+                    options.ListenAnyIP(4071);
+                });
                 webBuilder.UseNetTcp(40710);
                 webBuilder.UseStartup<Startup>();
             });
