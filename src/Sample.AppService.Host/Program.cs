@@ -1,6 +1,7 @@
 ﻿using CoreWCF.Configuration;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using SD.Toolkits.AspNet;
 
 namespace Sample.AppService.Host
 {
@@ -15,9 +16,15 @@ namespace Sample.AppService.Host
             {
                 webBuilder.UseKestrel(options =>
                 {
-                    options.ListenAnyIP(4071);
+                    foreach (int httpPort in AspNetSetting.HttpPorts)
+                    {
+                        options.ListenAnyIP(httpPort);
+                    }
                 });
-                webBuilder.UseNetTcp(40710);
+                foreach (int netTcpPort in AspNetSetting.NetTcpPorts)
+                {
+                    webBuilder.UseNetTcp(netTcpPort);
+                }
                 webBuilder.UseStartup<Startup>();
             });
 
