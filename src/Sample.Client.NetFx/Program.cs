@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Autofac;
 using Sample.IAppService.DTOs.Outputs;
 using Sample.IAppService.Interfaces;
+using SD.IOC.Core.Extensions;
 using SD.IOC.Core.Mediators;
-using SD.IOC.Extension.NetFx;
 using System;
 
 namespace Sample.Client
@@ -13,7 +13,7 @@ namespace Sample.Client
         {
             if (!ResolveMediator.ContainerBuilt)
             {
-                IServiceCollection builder = ResolveMediator.GetServiceCollection();
+                ContainerBuilder builder = ResolveMediator.GetContainerBuilder();
                 builder.RegisterConfigs();
                 ResolveMediator.Build();
             }

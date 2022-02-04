@@ -1,14 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>net40</TargetFramework>
     <OutputType>Exe</OutputType>
     <AssemblyName>Sample.Client</AssemblyName>
     <RootNamespace>Sample.Client</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SD.IOC.Core" Version="2.1.0" />
-    <PackageReference Include="SD.IOC.Extension.NetFx" Version="1.1.0" />
+    <PackageReference Include="SD.IOC.Core" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
