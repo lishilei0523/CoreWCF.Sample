@@ -1,6 +1,8 @@
 using CoreWCF.Configuration;
+using CoreWCF.Description;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+using Sample.AppService.Implements;
 using System.Configuration;
 
 namespace Sample.AppService.Host
@@ -16,6 +18,7 @@ namespace Sample.AppService.Host
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddServiceModelServices();
+            services.AddServiceModelMetadata();
 
             Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             services.AddServiceModelConfigurationManagerFile(configuration.FilePath);
@@ -26,7 +29,15 @@ namespace Sample.AppService.Host
         /// </summary>
         public void Configure(IApplicationBuilder appBuilder)
         {
-            appBuilder.UseServiceModel();
+            ServiceMetadataBehavior metadataBehavior = appBuilder.ApplicationServices.GetRequiredService<ServiceMetadataBehavior>();
+            metadataBehavior.HttpGetEnabled = true;
+            metadataBehavior.HttpsGetEnabled = true;
+            UseRequestHeadersForMetadataAddressBehavior addressBehavior = new UseRequestHeadersForMetadataAddressBehavior();
+
+            appBuilder.UseServiceModel(builder =>
+            {
+                builder.ConfigureServiceHostBase<OrderContract>(host => host.Description.Behaviors.Add(addressBehavior));
+            });
         }
     }
 }
