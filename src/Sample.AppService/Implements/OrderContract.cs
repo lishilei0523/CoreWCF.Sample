@@ -13,7 +13,7 @@ namespace Sample.AppService.Implements
     /// <summary>
     /// 订单服务契约实现
     /// </summary>
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall, IncludeExceptionDetailInFaults = true)]
     public class OrderContract : IOrderContract
     {
         /// <summary>
@@ -21,6 +21,7 @@ namespace Sample.AppService.Implements
         /// </summary>
         public OrderInfo GetOrder(string number)
         {
+            throw new InvalidOperationException("Hello World!");
             OrderInfo orderInfo = new OrderInfo
             {
                 Id = Guid.NewGuid(),
