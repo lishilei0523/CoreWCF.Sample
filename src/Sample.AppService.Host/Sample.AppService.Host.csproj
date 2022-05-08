@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CoreWCF.Primitives" Version="1.0.0" />
-    <PackageReference Include="CoreWCF.Http" Version="1.0.0" />
-    <PackageReference Include="CoreWCF.NetTcp" Version="1.0.0" />
-    <PackageReference Include="CoreWCF.ConfigurationManager" Version="1.0.0">
+    <PackageReference Include="CoreWCF.Primitives" Version="1.0.1" />
+    <PackageReference Include="CoreWCF.Http" Version="1.0.1" />
+    <PackageReference Include="CoreWCF.NetTcp" Version="1.0.1" />
+    <PackageReference Include="CoreWCF.ConfigurationManager" Version="1.0.1">
       <ExcludeAssets>contentFiles</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="SD.Toolkits.AspNet" Version="1.1.2" />
